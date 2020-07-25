@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery練習</title>
+</head>
+
+<body>
+    <h1 id="echo">jquery練習</h1>
+    <p id="test01">テスト01</p>
+    <p id="test02">テスト02</p>
+    <p id="test03">テスト03</p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // ここに処理を記述
+
+            $('#test01').on('click', function () {
+                $('#echo').css('color', 'red');
+            })
+
+            $('#test02').on('click', function () {
+                $('#test02').text('testゼロ２');
+            })
+            $('#test03').on('click', function () {
+                $('#body').append('<p id="test04">テスト04</p>');
+
+            }
+
+
+
+
+        });
+
+        $('#email').on('click', function () {
+            $('#email').text('gs@gs.com');
+        });
+
+
+    </script>
+</body>
+
+</html>
