@@ -11,12 +11,22 @@
     <h1>乱数発生の練習</h1>
 
     <script>
-      // 0から4までの乱数を発生
-      // 50~99までの乱数発生
-      var min = 50;
-      var max = 99;
-      const num = Math.floor(Math.random() * (max - min + 1) + min);
-      //   alert(num);
+      //Marh.floor=端数を切り捨てする関数
+      // const num = Math.floor(Math.random() * 10 + 1);
+      // console.log(num);
+
+      //0-9を表示
+      const num1 = Math.floor(Math.random() * 9);
+      console.log(num1);
+      // 1-9を表示
+      const num2 = Math.floor(Math.random() * 9 + 1);
+      console.log(num2);
+      // 5-10を表示
+      const num3 = Math.floor(Math.random() * 5 + 6);
+      console.log(num3);
+      // 50-99を表示
+      const num4 = Math.floor(Math.random() * 50 + 50);
+      console.log(num4);
     </script>
     <p>hello</p>
   </body>
