@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>おみくじアプリ作成❷</title>
   </head>
-  <body></body>
+  <body>
+    <button id="btn">おみくじを引く</button>
+    <script>
+      const num = Math.floor(Math.random() * 4);
+      $("#btn").on("click", function () {
+        if (num == 0) {
+          $("#btn").html("大吉");
+          $("#btn").css("color", "red");
+        } else if (num == 1) {
+          $("#btn").html("中吉");
+        } else if (num == 2) {
+          $("#btn").html("小吉");
+        } else if (num == 3) {
+          $("#btn").html("吉");
+        } else if (num == 4) {
+          $("#btn").html("凶");
+        } else {
+          $("#btn").html("error. try again!");
+        }
+      });
+    </script>
+  </body>
 </html>
