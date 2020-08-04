@@ -3,23 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>課題：じゃんけん</title>
+    <title>剪刀石頭布</title>
     <link rel="stylesheet" href="css/janken.css" />
   </head>
   <body>
     <header>
-      <h1>じゃんけんアプリ</h1>
+      <h1>和大便剪刀石頭布</h1>
     </header>
-    <main>
-      <ul>
+
+    <!-- ジャンケンの選択 -->
+    <div class="box_1">
+      <ul class="choice">
         <li id="gu_btn">✊</li>
+      </ul>
+    </div>
+    <div class="box_2">
+      <ul class="choice">
         <li id="choki_btn">✌️</li>
+      </ul>
+    </div>
+    <div class="box_3">
+      <ul class="choice">
         <li id="pa_btn">🖐</li>
       </ul>
-    </main>
-    <div id="com_hand">コンピューターが出した手は？</div>
-    <div id="judgement">結果は？</div>
-    <footer>フッター</footer>
+    </div>
+    <div class="box_4">
+      <ul class="choice">
+        <li>VS</li>
+      </ul>
+    </div>
+    <div id="com_hand" class="box_5">
+      <ul class="choice">
+        <li>💩</li>
+      </ul>
+    </div>
+
+    <div>
+      <p>結果是
+      <div id="judgement">:</div>
+      </p>
+    </div>
+    <footer>頁腳</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(function () {
@@ -30,7 +54,8 @@
           //0コンピューターはグー
           //1コンピューターはチョキ
           //2コンピューターはパー
-          $("#com_hand").text("コンピューターの手：" + result[rand]);
+          // $("#com_hand").text(result[rand]);
+          $("#com_hand").html('<ul class="choice"><li>💩' + result[rand] + '</li></ul>');
           if (rand == 0) {
             $("#judgement").text("あいこ");
           } else if (rand == 1) {
@@ -46,7 +71,7 @@
           //0コンピューターはグー
           //1コンピューターはチョキ
           //2コンピューターはパー
-          $("#com_hand").text("コンピューターの手：" + result[rand]);
+          $("#com_hand").html('<ul class="choice"><li>💩' + result[rand] + '</li></ul>');
           if (rand == 0) {
             $("#judgement").text("負け");
           } else if (rand == 1) {
@@ -62,8 +87,8 @@
           //0コンピューターはグー
           //1コンピューターはチョキ
           //2コンピューターはパー
-          $("#com_hand").text("コンピューターの手：" + result[rand]);
-          if (rand == 0) {
+          $("#com_hand").html('<ul class="choice"><li>💩' + result[rand] + '</li></ul>');
+　          if (rand == 0) {
             $("#judgement").text("勝ち");
           } else if (rand == 1) {
             $("#judgement").text("負け");
