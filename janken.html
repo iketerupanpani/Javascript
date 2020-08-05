@@ -6,9 +6,10 @@
     <title>剪刀石頭布</title>
     <link rel="stylesheet" href="css/janken.css" />
   </head>
+
   <body>
     <header>
-      <h1>和大便剪刀石頭布</h1>
+      <h1>剪刀石頭布</h1>
     </header>
 
     <!-- ジャンケンの選択 -->
@@ -28,22 +29,16 @@
       </ul>
     </div>
     <div class="box_4">
-      <ul class="choice">
-        <li>VS</li>
+      <ul class="choice1">
+        <li id="judgement"></li>
       </ul>
     </div>
     <div id="com_hand" class="box_5">
       <ul class="choice">
-        <li>💩</li>
       </ul>
     </div>
 
-    <div>
-      <p>結果是
-      <div id="judgement">:</div>
-      </p>
     </div>
-    <footer>頁腳</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(function () {
